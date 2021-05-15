@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %} La fecha actual es {% endblock %}
+{% block content %}
+<label title="Fecha" style="color: red;">Fecha: </label>
+<input type="text" value="{{ fecha_actual }}"> <br>
+<label style="color: red;">Hoy es: </label>
+<input type="text" value="{{ fecha_actual }}">
+<p>Hoy es: {{ fecha_actual }}</p>
+{% endblock %}

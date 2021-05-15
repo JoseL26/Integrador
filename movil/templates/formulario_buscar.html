@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= "{% static 'lib/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css' %}">
+    <script src="{% static 'lib/bootstrap-5.0.0-beta3-dist/js/jquery-3.6.0.min.js'%}"></script>
+    <script src="{% static 'lib/bootstrap-5.0.0-beta3-dist/js/popper.min.js'%}"></script>
+    <script src="{% static 'lib/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js'%}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Buscar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-control">
+            {% if errors %}
+            <ul>
+                {% for error in errors %}
+                <li style="color: red;">{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <h4>Buscar por cargo:</h4>
+            <form action="/buscar/" method="get">
+                <div class="form-group">
+                    <input type="text" name="q" autofocus="" class="form-control"><br>
+                    <input type="submit" value="Buscar" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+
+</body>
+</html>
